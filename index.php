@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>My FirstPHP Website</title>
+	<title>Dear Diary</title>
 	</head>
 	<body>
 		<a href="login.php"> Click here to login <br/>
