@@ -9,6 +9,7 @@
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<?php include "navbar_notloggedin.php" ?>
 		<h2>Login</h2>
 		<a href="index.php">Click here to go back</a></br></br>
 		<form action="checklogin.php" method="POST">

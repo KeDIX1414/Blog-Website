@@ -8,9 +8,9 @@
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<?php include "navbar.php" ?>
-		<a href="login.php"> Click here to login <br/>
-		<a href="register.php"> Click here to register
+		<?php include "pages/navbar_notloggedin.php" ?>
+		<a href="pages/login.php"> Click here to login <br/>
+		<a href="pages/register.php"> Click here to register
 
 	</body>
 </html>
