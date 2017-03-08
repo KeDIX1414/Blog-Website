@@ -17,16 +17,16 @@
 				<div class="col-sm-8">
 					<form action="index.php?page=register" method="POST">
 						<div class="form-group">
-                			<label for="firstName">First Name *</label>
-                			<input type="text" name="firstName" class="form-control">
+                			<label for="firstname">First Name *</label>
+                			<input type="text" name="firstname" class="form-control">
             			</div>
             			<div class="form-group">
-                			<label for="lastName">Last Name *</label>
-                			<input type="text" name="lastName" class="form-control">
+                			<label for="lastname">Last Name *</label>
+                			<input type="text" name="lastname" class="form-control">
             			</div>
             			<div class="form-group">
-                			<label for="lastName">Pen Name *</label>
-                			<input type="text" name="penName" class="form-control">
+                			<label for="lastname">Pen Name *</label>
+                			<input type="text" name="penname" class="form-control">
             			</div>
             			<div class="form-group">
                 			<label for="email">Email *</label>
@@ -56,13 +56,17 @@
 
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-	$username = mysql_real_escape_string($_POST['username']);
+	session_start();
+	$penname = mysql_real_escape_string($_POST['penname']);
 	$email = mysql_real_escape_string($_POST['email']);
 	$password = mysql_real_escape_string($_POST['password']);
-	include_once('../classes/usersDB.php');
+	$firstname = mysql_real_escape_string($_POST['firstname']);
+	$lastname = mysql_real_escape_string($_POST['lastname']);
+	$birthday= mysql_real_escape_string($_POST['birthday']);
+	include_once('classes/usersDB.php');
 	$usersDB = new usersDB();
 	$usersDB ->connect();
-	$usersDB -> register($username, $password, $email);
+	$usersDB -> register($penname, $password, $email, $firstname, $lastname, $birthday);
 
 }
 ?>

@@ -22,8 +22,7 @@
 	<body>
 		<?php include "navbar.php" ?>
 		<div class="container-fluid">
-  			<h1>My First Bootstrap Page</h1>
-  			<p>This is some text.</p> 
+  			<h1>Home Page</h1>
 		</div>
 	</body>
 </html>

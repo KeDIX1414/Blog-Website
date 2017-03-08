@@ -12,11 +12,23 @@
 	<body>
 		<?php include "navbar_notloggedin.php" ?>
 		<h2>Login</h2>
-		<a href="index.php">Click here to go back</a></br></br>
-		<form action="index.php?page=checklogin" method="POST">
-			Enter Username: <input type="text" name="username" required="required" /></br>
-			Enter Password: <input type="password" name="password" required="required" /> </br>
-			<input type="submit" value="login" />
-		</form>
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<form action="index.php?page=checklogin" method="POST">
+						<div class="form-group">
+                			<label for="penname">Pen Name *</label>
+                			<input type="text" name="penname" class="form-control">
+            			</div>
+            			<div class="form-group">
+                			<label for="password">Password *</label>
+                			<input type="password" name="password" class="form-control">
+            			</div>
+            			<button type="submit" class="btn btn-success">Login</button>
+            			
+					</form>
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
 	</body>
 </html>
