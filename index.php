@@ -8,10 +8,14 @@
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<?php include "pages/navbar_notloggedin.php" ?>
-		<a href="pages/login.php"> Click here to login <br/>
-		<a href="pages/register.php"> Click here to register
-
+		<?php
+			
+			$page = isset($_GET['page']) ? $_GET['page'] : 'first';
+    		$path = getcwd().'/pages/'.$page.'.php';
+    		if (file_exists($path)) {
+        		include $path;
+    		} 
+    	?>
 	</body>
 </html>
 

@@ -23,14 +23,14 @@ class usersDB {
 			if ($username == $table_users) {
 				$bool = false;
 				Print '<script>alert("Username has been taken!");</script>';
-				Print '<script>window.location.assign("register.php");</script>';
+				Print '<script>window.location.assign("index.php?page=register");</script>';
 			}
 		}
 
 		if($bool) {
 			mysql_query("INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')");
 			Print '<script>alert("Successfully Registered!");</script>';
-			Print '<script>window.location.assign("home.php");</script>';
+			Print '<script>window.location.assign("index.php?page=home");</script>';
 		}
 	}
 
@@ -50,15 +50,15 @@ class usersDB {
 			if (($username == $table_users) && ($password == $table_password)) {
 				if ($password == $table_password) {
 					$_SESSION['user'] = $username;
-					header("location: home.php");
+					header("location: index.php?page=home");
 				}
 			} else {
 				Print '<script>alert("Incorrect Password!");</script>';
-				Print '<script>window.location.assign("login.php");</script>';
+				Print '<script>window.location.assign("index.php?page=login");</script>';
 			}
 		} else {
 			Print '<script>alert("Incorrect Username!");</script>';
-			Print '<script>window.location.assign("login.php");</script>';
+			Print '<script>window.location.assign("index.php?page=login");</script>';
 		}
 	}
 }
