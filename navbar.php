@@ -4,10 +4,9 @@
       		<a class="navbar-brand" href="#">Dear Diary...</a>
     	</div>
     	<ul class="nav navbar-nav">
-      		<li class="active"><a href="#">Home</a></li>
-      		<li><a href="#">My Profile</a></li>
+      		<li class="active"><a href="index.php?page=home">Home</a></li>
+      		<li><a href="index.php?page=diary">My Diary</a></li>
       		<li><a href="#">Make New Entry</a></li>
-      		<li><a href="#">View My Diary</a></li>
     	</ul>
     	<form class="navbar-form navbar-left">
       		<div class="input-group">
